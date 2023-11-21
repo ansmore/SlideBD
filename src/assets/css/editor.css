@@ -1,0 +1,648 @@
+@font-face {
+    font-family: 'Gabarito';
+    src: url('../fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+    /* Ajusta la ruta y el formato según tu archivo */
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('../fonts/OpenSans-VariableFont_wdthwght.ttf') format('truetype');
+    /* Ajusta la ruta y el formato según tu archivo */
+}
+
+#diapositivas[tema='oscuro'] {
+    --background: #1d1e18;
+    --border: #eef0f4;
+    --focus: #26272d;
+}
+
+#diapositivas[tema='claro'] {
+    --background: #eef0f4;
+    --border: #1d1e18;
+    --focus: #d1d1d1;
+}
+
+body {
+    font-family: Open-Sans;
+    background-color: #1d1e18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.1% 10.9%;
+    gap: 30px;
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+#inputTitulo {
+    background-color: transparent;
+    color: #eef0f4;
+    font-family: Gabarito;
+    font-size: 32px;
+    width: max-content;
+    border: solid 2px transparent;
+    margin: 0;
+}
+
+#inputTitulo:hover {
+    border: solid 2px #eef0f4;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: 104%;
+    color: #eef0f4;
+    min-width: min-content;
+    transform: scale(1);
+}
+
+.headerButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    gap: 5px 3%;
+    border-radius: 8px;
+    background: #304a6e;
+    padding: 1%;
+    min-width: 490px;
+}
+
+#publicar_button {
+    display: flex;
+    gap: 15px;
+}
+
+.descripcion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37.3%;
+    min-width: 37.5px;
+}
+
+#data_p {
+    width: 100%;
+}
+
+#icon-presentaciones {
+    margin: 0px 15px;
+    font-size: 18px;
+    font-family: Open-Sans;
+}
+
+.input {
+    width: 100%;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+input[name='p_descripcion'] {
+    height: 30px;
+    font-family: Open-Sans;
+    font-size: 16px;
+    padding-left: 3%;
+    border-color: transparent;
+}
+
+input[name='p_descripcion']:focus {
+    background: #eef0f4;
+}
+
+#nova-diapositiva {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+#nova-diapositiva-button {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+#tema-seleccion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+#tema-button {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: flex;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #eef0f4;
+    color: #18191f;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    font-size: 16px;
+    background: #eef0f4;
+}
+
+#diapositivas {
+    width: 100%;
+    display: contents;
+}
+
+.d-container {
+    display: flex;
+    aspect-ratio: 16/9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #eef0f4;
+    width: 83%;
+    min-width: 615px;
+    box-sizing: border-box;
+    padding: 4%;
+    background-color: var(--background);
+}
+
+.d-container input {
+    display: block;
+    width: 100%;
+    font-size: 240%;
+    font-family: Open-Sans;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: none;
+    color: var(--border);
+    outline: none;
+    border: solid 2px var(--border);
+    height: 15%;
+}
+
+.d-container textarea {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+    border: solid 2px var(--border);
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    color: var(--border);
+}
+
+.focus:focus {
+    border: solid 2px #304a6e;
+    background-color: var(--focus);
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    margin-top: 1%;
+}
+
+.dropdown-content {
+    border-radius: 8px;
+}
+
+.dropdown-content span {
+    display: block;
+    padding: 8px;
+    background-color: #eef0f4;
+    color: black;
+}
+
+.dropdown-content span:hover {
+    color: #ffffff;
+    background-color: #00a4bd;
+}
+
+/* Estilos para la lista con fondo blanco */
+.white-list {
+    background-color: var(--list-background);
+    border: 1px solid #e0e0e0;
+    max-width: 200px;
+    max-height: auto;
+}
+
+.white-list-header {
+    background-color: #304a6e;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+
+.white-list-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.white-list-items li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    color: var(--list-item-color);
+}
+
+.white-list-items li:last-child {
+    border-bottom: none;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos del scroll para .white-list-items-container */
+.white-list-items-container {
+    max-height: 339px;
+    overflow-y: auto;
+    border-radius: 6px;
+}
+
+/* Personalización del scroll */
+.white-list-items-container::-webkit-scrollbar {
+    width: 12px; /* Ancho del scroll */
+    height: 10px;
+    border: 6px;
+}
+
+.white-list-items-container::-webkit-scrollbar-track {
+    background-color: rgba(217, 217, 217, 0.4); /* Color de la pista (fondo) del scroll con opacidad */
+}
+
+.white-list-items-container::-webkit-scrollbar-thumb {
+    background-color: rgba(217, 217, 217, 1); /* Color del pulgón (parte deslizable) del scroll */
+    border-radius: 6px; /* Borde redondeado del pulgón */
+    height: 60px;
+}
+
+.white-list-items-container::-webkit-scrollbar-button {
+    display: none; /* Oculta los botones de flecha (si están presentes) */
+}
+
+.delete-slide-icon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    opacity: 0.7;
+    /* Lo hacemos un poco transparente para que no sea demasiado llamativo */
+    transition: opacity 0.3s;
+    /* Una transición suave para el hover */
+    width: 100%;
+    align-items: flex-start;
+    height: 40%;
+}
+
+.delete-slide-icon-content {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    opacity: 0.7;
+    /* Lo hacemos un poco transparente para que no sea demasiado llamativo */
+    transition: opacity 0.3s;
+    /* Una transición suave para el hover */
+    width: 100%;
+    align-items: flex-start;
+}
+
+.delete-slide-icon:hover {
+    opacity: 1;
+    /* Al pasar el ratón por encima, el ícono se vuelve totalmente opaco */
+}
+
+/*Dialog*/
+dialog {
+    background-color: #a7a7a7;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 20px;
+    bottom: 50%;
+    left: 0%;
+    width: 24%;
+    z-index: 9999;
+}
+
+#confirmarGuardar,
+#confirmarEliminar {
+    background-color: #a7a7a7;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 20px;
+    bottom: 50%;
+    left: 0%;
+    width: 16%;
+    z-index: 9999;
+}
+
+
+#btn-aceptar,
+#btn-cancelar {
+    background-color: #304a6e;
+    font-size: 17px;
+    padding: 10px 20px;
+    color: #eef0f4;
+    border: none;
+    margin-right: 20px;
+    border-radius: 8px;
+    float: right;
+}
+
+#btn-aceptar:hover,
+#btn-cancelar:hover,
+#btn-aceptar-eliminar:hover,
+#btn-cancelar-eliminar:hover,
+#btn_aceptar_error:hover {
+    background-color: #223650;
+    cursor: pointer;
+}
+
+#btn-aceptar-exito,
+#btn-aceptar-exito-eliminar,
+#btn-aceptar-error {
+    background-color: #304a6e;
+    font-size: 17px;
+    padding: 10px 20px;
+    color: #eef0f4;
+    border-radius: 8px;
+    border: none;
+    margin-right: 20px;
+    float: right;
+}
+
+#btn-aceptar-exito:hover,
+#btn-aceptar-exito-eliminar:hover {
+    background-color: #223650;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo oscuro con opacidad */
+    z-index: 9998;
+    /* Asegura que la superposición esté por encima del contenido */
+    display: none;
+    /* Inicialmente oculta la superposición */
+}
+
+
+/*Diapostiva de tipoImagen*/
+.d-containerImagen {
+    display: flex;
+    aspect-ratio: 16/9;
+    flex-direction: column;
+    border: 2px solid #eef0f4;
+    width: 83%;
+    min-width: 615px;
+    box-sizing: border-box;
+    padding: 4%;
+    background-color: var(--background);
+    height: 100%;
+}
+
+.d-containerImagen input[type="text"] {
+    display: flex;
+    width: 100%;
+    font-size: 240%;
+    flex-direction: column;
+    font-family: Open-Sans;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: none;
+    color: var(--border);
+    outline: none;
+    border: solid 2px var(--border);
+    height: 15%;
+}
+
+.d-containerImgText {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 448px;
+}
+
+.d-containerImgText textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 49%;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+    border: solid 2px var(--border);
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    color: var(--border);
+}
+
+.d-containerImgText .imagen {
+    display: flex;
+    align-items: center;
+    height: 15%;
+    font-size: 23px;
+    width: 49%;
+    resize: none;
+    padding: 10px;
+    border: solid 2px var(--border);
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    color: var(--border);
+}
+
+
+.imagenDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 50%;
+}
+
+.imgMostrada {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#mensajeNoImg {
+    margin-top: 5%;
+    font-size: 20px;
+    color: var(--border);
+}
+
+#imgEliminar {
+    position: absolute;
+    top: 26%;
+    right: 15%;
+}
+
+#textareaPregunta {
+    display: flex;
+    flex-direction: row;
+    height: 15%;
+    width: 100%;
+    resize: none;
+    font-size: 25px;
+    font-family: Open-Sans;
+    padding: 10px;
+    border: solid 2px var(--border);
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    color: var(--border);
+    margin-top: 2%;
+
+}
+
+.respuesta{
+    display: flex;
+    width: 60%;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 80%;
+    font-family: Open-Sans;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: none;
+    color: var(--border);
+    outline: none;
+    border: solid 2px var(--border);
+    height: 80%;
+}
+
+.respuestaCorrecta{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 150%;
+    font-family: Open-Sans;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: none;
+    color: var(--border);
+    outline: none;
+    border: solid 2px var(--border);
+    height: 50%;
+}
+
+.respuestas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2%;
+}
+
+select {
+    width: 20%;
+    height: 20%;
+    font-size: 80%;
+    cursor: pointer;
+    border: solid 2px var(--border);
+}
+
+.dialogPin {
+    background-color: #304a6e;
+    color: #eef0f4;
+    border: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 30%;
+    height: 30%;
+}
+
+.dialogPin > button {
+    align-self: end;
+}
+
+.dialogPin p {
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 28px;
+}
+
+.dialogPin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialogPin form div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.dialogPin form div input {
+    width: 30%;
+    background: transparent;
+    border: none;
+    border-bottom: solid 2px #EEF0F4;
+    text-align: center;
+    font-size: 24px;
+    color: #EEF0F4;
+}
+
+.dialogPin form div input:focus {
+    border: none;
+    border-bottom: solid 2px #EEF0F4;
+    outline: none;
+}

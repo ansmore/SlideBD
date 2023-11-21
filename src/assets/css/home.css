@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Gabarito';
+    src: url('../fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('../fonts/OpenSans-VariableFont_wdthwght.ttf') format('truetype');
+}
+
+body {
+    background-color: #18191f;
+    padding: 50px 108px;
+}
+
+h2 {
+    font-family: Gabarito;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #eef0f4;
+    margin: 0;
+}
+
+#global {
+    font-family: Open-Sans;
+    display: flex;
+    padding-top: 3%;
+    flex-wrap: wrap;
+}
+
+#añadirPresentacion {
+    width: 225px;
+    height: 225px;
+    background-color: #304a6e;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 25px 0px;
+    gap: 25px;
+}
+
+.caja_añadir {
+    background-color: #668dc0;
+    border-radius: 100%;
+    width: 94px;
+    height: 94px;
+}
+
+#añadir {
+    font-size: 24px;
+    color: #eef0f4;
+    margin: 0;
+}
+
+.caja_añadir img {
+    height: 94px;
+    width: 94px;
+}
+
+.caja {
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #eef0f4;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    width: 225px;
+    height: 225px;
+    margin: 0 25px 25px 0px;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.imagen-overlay {
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 25%;
+    top: 28%;
+    cursor: pointer;
+}
+
+.imagen-overlay img {
+    height: 115px;
+}
+
+.caja:hover .imagen-overlay {
+    display: flex;
+}
+
+.caja:hover {
+    background-color: #bbbbbb;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+/* Boton de opciones */
+.opciones-btn {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: #304a6e;
+    color: #eef0f4;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    font-size: 32px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+/* Caja de Botones dentro de opciones */
+.opciones {
+    display: none;
+    position: absolute;
+    left: 103%;
+    bottom: 0px;
+    background-color: #304a6e;
+    z-index: 1;
+    padding: 0;
+    border-radius: 8px;
+}
+
+/* Botones dentro de la caja de opciones */
+.editar,
+.clonar,
+.eliminar {
+    display: flex;
+    background-color: #304a6e;
+    font-family: 'Gabarito';
+    color: #eef0f4;
+    cursor: pointer;
+    border: none;
+    width: max-content;
+    padding: 5px;
+    margin: 10px;
+    font-size: 24px;
+    align-items: center;
+}
+
+/*.opciones button {
+  font-family: Open-Sans;
+  width: max-content;
+  padding: 0;
+  margin: 10px;
+  align-items: center;
+}*/
+
+button img {
+    margin-right: 10px;
+}
+
+/* Estilo para el botón "Crear Presentación" */
+#crearPresentacion {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background-color: #304a6e;
+    color: #eef0f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#btn-crearPresentacion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    font-size: 24px;
+    font-family: 'Gabarito';
+    cursor: pointer;
+    background-color: #304a6e;
+}
+
+button:hover {
+    background-color: #223650;
+}
+
+#crearPresentacion:hover,
+#btn-crearPresentacion:hover {
+    background-color: #223650;
+}
+
+/*Dialog*/
+dialog {
+    background-color: #a7a7a7;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 50%;
+    left: 0%;
+    z-index: 9999;
+}
+
+#btn-aceptar,
+#btn-cancelar {
+    background-color: #304a6e;
+    font-size: 17px;
+    padding: 10px 20px;
+    color: #eef0f4;
+    border: none;
+    margin-right: 20px;
+    border-radius: 8px;
+    float: right;
+}
+
+#btn-aceptar:hover,
+#btn-cancelar:hover {
+    background-color: #223650;
+    cursor: pointer;
+}
+
+#btn-aceptar-exito {
+    background-color: #304a6e;
+    font-size: 17px;
+    padding: 10px 20px;
+    color: #eef0f4;
+    border-radius: 8px;
+    border: none;
+    margin-right: 20px;
+    float: right;
+}
+
+#btn-aceptar-exito:hover {
+    background-color: #223650;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro con opacidad */
+    z-index: 9998; /* Asegura que la superposición esté por encima del contenido */
+    display: none; /* Inicialmente oculta la superposición */
+}

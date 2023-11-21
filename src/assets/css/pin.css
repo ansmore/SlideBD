@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Gabarito';
+    src: url('../fonts/Gabarito-VariableFont_wght.ttf') format('truetype'); /* Ajusta la ruta y el formato según tu archivo */
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('../fonts/OpenSans-VariableFont_wdthwght.ttf') format('truetype'); /* Ajusta la ruta y el formato según tu archivo */
+}
+
+body {
+    font-family: Open-Sans;
+    background-color: #1d1e18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #eef0f4;
+    color: #18191f;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    font-size: 16px;
+    background: #eef0f4;
+}
+
+dialog {
+    background-color: #a7a7a7;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 20px;
+    bottom: 50%;
+    left: 0%;
+    width: 24%;
+    z-index: 9999;
+}
+
+.dialogPin {
+    background-color: #304a6e;
+    color: #eef0f4;
+    border: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 30%;
+}
+
+.dialogPin > button {
+    align-self: end;
+}
+
+.dialogPin p {
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 28px;
+}
+
+.dialogPin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialogPin form div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.dialogPin form div input {
+    width: 30%;
+    background: transparent;
+    border: none;
+    border-bottom: solid 2px #EEF0F4;
+    text-align: center;
+    font-size: 24px;
+    color: #EEF0F4;
+}
+
+.dialogPin form div input:focus {
+    border: none;
+    border-bottom: solid 2px #EEF0F4;
+    outline: none;
+}
